@@ -620,60 +620,194 @@ footer .about{color:var(--mut);font-size:15px;margin:16px 0 20px;max-width:340px
 .mi .inc .ic{width:16px;height:16px;color:#4fe08a}
 
 /* panel de pedidos */
-#panel{display:none;position:relative;z-index:2;min-height:100vh;padding:22px 0 80px}
-body.panelon #panel{display:block}
-body.panelon main,body.panelon footer,body.panelon .ticker,body.panelon header.nav,body.panelon .fab,body.panelon .mbar,body.panelon .demo,body.panelon #prog{display:none!important}
-.pwrap{width:min(1040px,100% - 28px);margin-inline:auto}
-.ptop{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
-.ptop .btn{flex-shrink:0}
-.ptop .brand{flex-shrink:1}
-.pk{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
-.pk div{border-radius:16px;background:var(--card);border:1px solid var(--line);padding:14px 16px}
-.pk b{display:block;font-family:var(--fd);font-weight:900;font-style:italic;font-size:40px;line-height:1;white-space:nowrap}
-.pk span{font-size:13px;color:var(--mut)}
-.pk div.hot{border-color:rgba(255,210,0,.5);background:rgba(255,210,0,.07)}
-.pk div.hot b{color:var(--yel)}
-.pact{display:flex;gap:10px;flex-wrap:wrap}
-.pact .btn{flex:1 1 240px;height:54px}
-.phelp{font-size:13.5px;color:var(--mut);margin:12px 2px 18px}
-.phelp b{color:#fff}
-.ptools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
-.ptools .chips{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
-.ptools .chips::-webkit-scrollbar{display:none}
-.ptools .chip b{margin-left:6px;opacity:.75}
-.ptools .search{flex:1 1 100%}
-.pday{font-family:var(--fd);font-weight:800;font-style:italic;font-size:22px;text-transform:uppercase;margin:18px 2px 8px;color:#fff}
-.po{border-radius:18px;background:var(--card);border:1px solid var(--line);border-left:5px solid #3a3a45;padding:14px 16px;margin-bottom:10px;animation:cin .4s var(--ease) both}
-.po.st-nuevo{border-left-color:var(--yel)}.po.st-confirmado{border-left-color:#28e070}.po.st-listo{border-left-color:#4ea1ff}.po.st-entregado,.po.st-anulado{opacity:.7}
-.poh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.poh b{font-family:var(--fd);font-weight:800;font-size:21px;letter-spacing:.03em}
-.poh em{margin-left:auto;font-style:italic;font-family:var(--fd);font-weight:900;font-size:27px;white-space:nowrap}
-.pill.g{background:#1fb855;color:#fff}.pill.b{background:#2f7fe0;color:#fff}
-.pot{font-weight:600;font-size:15.5px;margin:8px 0 2px}
-.poc{font-size:15px;color:#d5d5db}
-.poc b{color:#fff}
-.pol{font-size:14px;color:var(--mut);margin-top:2px}
-.poi{list-style:none;margin:10px 0;padding:10px 12px;border-radius:12px;background:#0c0c0f;border:1px solid #1d1d24;font-size:14.5px;color:#d5d5db;display:grid;gap:5px}
-.pop{font-size:14px;color:var(--mut)}
-.pop b{color:#fff}
-.poa{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.poa .pb{height:44px;padding:0 14px;border-radius:12px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:7px;background:#1b1b22;border:1px solid #2e2e38;white-space:nowrap;transition:.2s}
-.poa .pb:hover{border-color:#666}
-.poa .pb.go{background:var(--red);border-color:var(--red)}
-.poa .pb.wa{background:rgba(31,184,85,.14);border-color:rgba(31,184,85,.5);color:#6ff0a4}
-.poa .pb.dim{color:var(--mut)}
-.poa .pb .ic{width:16px;height:16px}
-.pempty{text-align:center;padding:46px 18px;border:1px dashed #2d2d36;border-radius:20px;color:var(--mut)}
-.pempty b{display:block;font-family:var(--fd);font-style:italic;font-size:28px;color:#fff;text-transform:uppercase;margin-bottom:6px}
-.pempty .btn{margin-top:16px}
-.pbox{position:fixed;inset:0;z-index:160;background:rgba(0,0,0,.7);display:none;place-items:center;padding:16px}
+#panel{display:none;position:relative;z-index:2;min-height:100vh;background:#09090b}
+body.panelon #panel{display:grid;grid-template-columns:236px minmax(0,1fr)}
+body.panelon main,body.panelon footer,body.panelon .ticker,body.panelon header.nav,body.panelon .fab,body.panelon .mbar,body.panelon .demo,body.panelon #prog,body.panelon .noise{display:none!important}
+.pside{position:sticky;top:0;height:100vh;padding:18px 12px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px;background:#0c0c0f}
+.pside .brand{margin:2px 6px 20px}
+.pside .brand .t{font-size:21px}
+.pnav{display:flex;align-items:center;gap:12px;height:46px;padding:0 12px;border-radius:12px;font-weight:600;font-size:15px;color:#c4c4cc;width:100%;text-align:left;transition:.2s}
+.pnav .ic{width:19px;height:19px}
+.pnav b{margin-left:auto;min-width:24px;height:22px;padding:0 7px;border-radius:11px;background:#1f1f27;font-size:12.5px;display:grid;place-items:center;color:#fff}
+.pnav.hot b{background:var(--yel);color:#000}
+.pnav:hover{background:#15151b;color:#fff}
+.pnav.on{background:rgba(234,12,12,.14);color:#fff;box-shadow:inset 3px 0 0 var(--red)}
+.pside .sp{flex:1}
+.pside .note{font-size:12.5px;color:var(--mut2);padding:0 8px 10px;line-height:1.4}
+.pmain{padding:22px clamp(14px,2.4vw,34px) 60px}
+.phead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.phead .mlogo{display:none;width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 2px var(--red)}
+.phead h2{font-family:var(--fd);font-weight:900;font-style:italic;font-size:42px;line-height:.95;text-transform:uppercase}
+.phead .dt{color:var(--mut);font-size:14.5px;margin-top:3px}
+.phead .search{flex:1 1 240px;max-width:380px;margin-left:auto}
+.phead .btn{height:46px;border-radius:12px;font-size:16px;padding:0 18px}
+.pk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:22px}
+.pk button{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center;text-align:left;border-radius:16px;background:#121217;border:1px solid var(--line);padding:14px;transition:.2s}
+.pk button:hover{border-color:#3d3d49}
+.pk i{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#1b1b22;color:#fff}
+.pk i .ic{width:21px;height:21px}
+.pk b{display:block;font-family:var(--fd);font-weight:900;font-style:italic;font-size:34px;line-height:1;white-space:nowrap}
+.pk span{font-size:13px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.pk .hot{border-color:rgba(255,210,0,.55);background:rgba(255,210,0,.06)}
+.pk .hot i{background:var(--yel);color:#000}
+.pk .hot b{color:var(--yel)}
+.pgrid2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:26px;align-items:start}
+.psec{margin-bottom:26px}
+.psec>h3{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:#c9c9d2;margin:0 2px 10px}
+.psec>h3 span{min-width:22px;height:20px;padding:0 6px;border-radius:10px;background:#1f1f27;font-size:12px;display:grid;place-items:center;color:#fff}
+.psec>h3 button{margin-left:auto;font-size:13px;font-weight:600;color:var(--mut);display:flex;gap:6px;align-items:center;padding:4px 6px;border-radius:8px}
+.psec>h3 button:hover{color:#fff}
+.psec>h3 button .ic{width:14px;height:14px}
+.orow{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 14px;border-radius:16px;background:#121217;border:1px solid var(--line);cursor:pointer;transition:.2s}
+.orow+.orow{margin-top:8px}
+.orow:hover{border-color:#3d3d49;background:#15151b}
+.oty{width:44px;height:44px;border-radius:13px;display:grid;place-items:center}
+.oty .ic{width:21px;height:21px}
+.t-inst{background:rgba(234,12,12,.16);color:#ff6a60}.t-rec{background:#1e1e26;color:#c9c9d2}.t-aqp{background:rgba(40,224,112,.13);color:#4fe08a}.t-pe{background:rgba(78,161,255,.14);color:#7dbbff}
+.o1{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:16px;line-height:1.25}
+.o1 b{font-weight:700}
+.o2{font-size:14.5px;color:#d0d0d8;margin-top:3px}
+.o3{font-size:13px;color:var(--mut);margin-top:2px}
+.oend{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.oend>b{font-family:var(--fd);font-weight:900;font-style:italic;font-size:25px;line-height:1;white-space:nowrap}
+.stag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:3px 9px 3px 8px;border-radius:999px;white-space:nowrap}
+.stag::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.stag.y{color:var(--yel);background:rgba(255,210,0,.1)}.stag.g{color:#4fe08a;background:rgba(40,224,112,.1)}.stag.b{color:#7dbbff;background:rgba(78,161,255,.12)}.stag.k{color:#a3a3ae;background:#1c1c23}
+.stag.ex{color:#a3a3ae;background:transparent;border:1px dashed #3a3a45;padding:2px 8px}.stag.ex::before{display:none}
+.pb{height:40px;padding:0 13px;border-radius:11px;font-weight:700;font-size:13.5px;display:inline-flex;align-items:center;justify-content:center;gap:7px;background:#1b1b22;border:1px solid #2e2e38;white-space:nowrap;transition:.2s}
+.pb:hover{border-color:#666}
+.pb.go{background:var(--red);border-color:var(--red)}
+.pb.go:hover{background:var(--red2)}
+.pb.wa{background:rgba(31,184,85,.14);border-color:rgba(31,184,85,.5);color:#6ff0a4}
+.pb.dim{color:var(--mut)}
+.pb .ic{width:16px;height:16px}
+.pok{display:flex;gap:12px;align-items:center;padding:16px;border-radius:16px;border:1px dashed #2a2a33;color:var(--mut);font-size:14.5px}
+.pok i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(40,224,112,.12);color:#4fe08a;flex-shrink:0}
+.pok b{display:block;color:#fff;font-size:15px}
+.ptys{display:flex;gap:8px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-bottom:16px;padding-bottom:2px}
+.ptys::-webkit-scrollbar{display:none}
+.ptys .chip b{margin-left:6px;opacity:.7}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.bcol{border-radius:18px;background:#0d0d11;border:1px solid var(--line);padding:12px}
+.bcol>h4{display:flex;align-items:center;gap:9px;font-size:14.5px;font-weight:700;margin:2px 4px 12px}
+.bcol>h4::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c)}
+.bcol>h4 span{margin-left:auto;color:var(--mut);font-weight:600}
+.bcol .orow,.cmp .orow{grid-template-columns:44px minmax(0,1fr)}
+.bcol .oend,.cmp .oend{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center;border-top:1px solid #1e1e26;padding-top:10px}
+.bcol .none{padding:18px 10px;text-align:center;color:var(--mut2);font-size:13.5px}
+.bsel{display:none}
+.pmore{margin-top:18px;font-size:14px;color:var(--mut);font-weight:600;padding:8px 4px}
+.pmore:hover{color:#fff}
+.slot{display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;align-items:start;padding:7px 0}
+.slot+.slot{border-top:1px solid #15151b}
+.slot time{font-family:var(--fd);font-weight:800;font-size:20px;color:#fff;padding-top:8px}
+.slot.past time{color:var(--mut2)}
+.slot .free{display:block;padding:10px 12px;border-radius:12px;border:1px dashed #26262e;color:var(--mut2);font-size:13.5px}
+.slot .stack{display:grid;gap:6px}
+.omini{display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:10px 12px;border-radius:12px;background:#15151b;border:1px solid var(--line);border-left:4px solid var(--yel);font-size:14.5px;transition:.2s}
+.omini:hover{border-color:#3d3d49;border-left-color:var(--yel)}
+.omini.st-confirmado,.omini.st-confirmado:hover{border-left-color:#28e070}.omini.st-listo,.omini.st-listo:hover{border-left-color:#4ea1ff}
+.omini b{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omini span{color:var(--mut);font-size:13px;margin-left:auto;white-space:nowrap}
+.pcard{border-radius:18px;background:#0d0d11;border:1px solid var(--line);padding:6px 14px}
+.prow{display:grid;grid-template-columns:46px minmax(0,1fr);gap:12px;align-items:center;padding:11px 0}
+.prow+.prow{border-top:1px solid #17171d}
+.prow>b{font-family:var(--fd);font-weight:900;font-style:italic;font-size:28px;text-align:center;line-height:1}
+.prow>b small{font-size:15px;color:var(--mut);font-style:normal}
+.prow div b{display:block;font-size:15px;font-weight:600}
+.prow div span{font-size:13px;color:var(--mut)}
+.ytot{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.ytot div{border-radius:16px;background:#121217;border:1px solid var(--line);padding:14px 16px}
+.ytot b{display:block;font-family:var(--fd);font-weight:900;font-style:italic;font-size:32px;line-height:1;white-space:nowrap}
+.ytot span{font-size:13px;color:var(--mut)}
+.ytot .v b{color:#4fe08a}.ytot .p b{color:var(--yel)}
+.yline{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:12px 0;cursor:pointer}
+.yline+.yline{border-top:1px solid #17171d}
+.yline .op{font-family:var(--fd);font-weight:800;font-size:22px;letter-spacing:.06em}
+.yline .op small{display:block;font:500 12px var(--fb);color:var(--mut);letter-spacing:0}
+.yline .who b{display:block;font-size:15px;font-weight:600}
+.yline .who span{font-size:13px;color:var(--mut)}
+.yline .am{font-family:var(--fd);font-weight:900;font-style:italic;font-size:23px;white-space:nowrap}
+.pempty{text-align:center;padding:54px 18px;border:1px dashed #2d2d36;border-radius:20px;color:var(--mut);max-width:560px;margin:30px auto}
+.pempty b{display:block;font-family:var(--fd);font-style:italic;font-size:30px;color:#fff;text-transform:uppercase;margin-bottom:6px}
+.pempty .btn{margin-top:18px}
+.pempty ol{text-align:left;max-width:340px;margin:16px auto 0;padding-left:20px;display:grid;gap:6px;font-size:14.5px}
+.pscrim{position:fixed;inset:0;z-index:164;background:rgba(0,0,0,.62);opacity:0;pointer-events:none;transition:opacity .3s}
+.pscrim.on{opacity:1;pointer-events:auto}
+.psheet{position:fixed;top:0;right:0;bottom:0;z-index:165;width:min(480px,100%);background:#0d0d11;border-left:1px solid var(--line);transform:translateX(105%);transition:transform .45s var(--ease);display:flex;flex-direction:column}
+.psheet.on{transform:none}
+.psh{display:flex;align-items:center;gap:10px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.psh h3{flex:1;font-family:var(--fd);font-weight:800;font-size:25px;letter-spacing:.03em}
+.psb{flex:1;overflow-y:auto;padding:16px 18px 20px;overscroll-behavior:contain}
+.psf{border-top:1px solid var(--line);padding:14px 18px 16px;background:#0a0a0d;display:grid;gap:8px}
+.psf .pb{height:48px;font-size:15px}
+.psf .row{display:flex;gap:8px;flex-wrap:wrap}
+.psf .row .pb{flex:1 1 auto}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:18px}
+.flow div{font-size:12px;color:var(--mut2);font-weight:600;padding-top:10px;position:relative;line-height:1.2}
+.flow div::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:3px;background:#22222a}
+.flow div.done::before{background:#28e070}
+.flow div.on{color:#fff}.flow div.on::before{background:var(--yel)}
+.flow.end div::before{background:#28e070}
+.flow.nul div::before{background:#3a3a45}
+.pblk{border-radius:16px;background:#121217;border:1px solid var(--line);padding:14px;margin-bottom:10px}
+.pblk small{display:block;font-size:12.5px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.pblk p{font-size:15.5px;line-height:1.4}
+.pblk p b{font-weight:700}
+.pblk p span{color:var(--mut)}
+.pblk ul{list-style:none;display:grid;gap:8px;font-size:15px}
+.pblk li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px;align-items:start}
+.pblk li i{font:800 italic 20px/1.1 var(--fd);color:var(--red2);font-style:italic}
+.pblk .tt{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pblk .tt>b{font-family:var(--fd);font-weight:900;font-style:italic;font-size:34px;line-height:1;white-space:nowrap}
+.pblk textarea{width:100%;min-height:70px;border-radius:12px;background:#08080a;border:1.5px solid #2a2a33;padding:10px 12px;font:15px/1.4 var(--fb);color:#fff;resize:vertical}
+.pblk textarea:focus{outline:none;border-color:var(--red)}
+.pwa{display:flex;gap:8px;flex-wrap:wrap}
+.pbox{position:fixed;inset:0;z-index:170;background:rgba(0,0,0,.72);display:none;place-items:center;padding:16px}
 .pbox.on{display:grid}
 .pbx{width:min(560px,100%);background:#0e0e12;border:1px solid var(--line);border-radius:22px;padding:20px}
-.pbx h4{font-family:var(--fd);font-weight:900;font-style:italic;font-size:28px;text-transform:uppercase;margin-bottom:12px}
-.pbx textarea{width:100%;height:240px;border-radius:14px;background:#08080a;border:1.5px solid #2a2a33;padding:12px;font:15px/1.45 var(--fb);color:#fff;resize:vertical}
+.pbx h4{font-family:var(--fd);font-weight:900;font-style:italic;font-size:28px;text-transform:uppercase;margin-bottom:6px}
+.pbx p{font-size:14px;color:var(--mut);margin-bottom:12px}
+.pbx textarea{width:100%;height:230px;border-radius:14px;background:#08080a;border:1.5px solid #2a2a33;padding:12px;font:15px/1.45 var(--fb);color:#fff;resize:vertical}
 .pbx textarea:focus{outline:none;border-color:var(--red)}
 .pbb{display:flex;justify-content:flex-end;gap:10px;margin-top:12px}
-@media (max-width:640px){.pk{grid-template-columns:1fr 1fr}.pk b{font-size:34px}.poa .pb{flex:1 1 auto;justify-content:center}}
+.pbar{display:none}
+@media (max-width:1100px){.pgrid2{grid-template-columns:minmax(0,1fr)}.pk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  body.panelon #panel{display:block}
+  .pside{display:none}
+  .pmain{padding:14px 14px 96px}
+  .phead{gap:10px;margin-bottom:14px}
+  .phead .mlogo{display:block}
+  .phead h2{font-size:32px}
+  .phead .dt{font-size:13px;margin-top:1px}
+  .phead .btn{margin-left:auto;height:44px;padding:0 14px;font-size:15px}
+  .phead .search{order:5;flex:1 1 100%;max-width:none;margin:0}
+  .pk{gap:8px;margin-bottom:18px}
+  .pk button{grid-template-columns:38px minmax(0,1fr);gap:10px;padding:12px}
+  .pk i{width:38px;height:38px;border-radius:11px}
+  .pk b{font-size:28px}
+  .orow{grid-template-columns:44px minmax(0,1fr)}
+  .oend{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center;border-top:1px solid #1e1e26;padding-top:10px}
+  .board{display:block}
+  .bcol{display:none;background:none;border:0;padding:0}
+  .bcol.cur{display:block}
+  .bcol>h4{display:none}
+  .bsel{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:14px;padding:4px;border-radius:14px;background:#121217;border:1px solid var(--line)}
+  .bsel button{height:42px;border-radius:10px;font-weight:700;font-size:13.5px;color:var(--mut);display:flex;align-items:center;justify-content:center;gap:6px}
+  .bsel button b{font-weight:700;opacity:.8}
+  .bsel button.on{background:#22222b;color:#fff}
+  .yline{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px}
+  .yline .op{grid-column:1}.yline .am{grid-column:2;grid-row:1;text-align:right}.yline .who{grid-column:1}.yline .act{grid-column:2;grid-row:2;justify-self:end}
+  .ytot{gap:8px}.ytot div{padding:12px}.ytot b{font-size:25px}
+  .psheet{width:100%;border-left:0}
+  .pbar{position:fixed;left:0;right:0;bottom:0;z-index:150;display:grid;grid-template-columns:repeat(5,1fr);background:rgba(12,12,15,.96);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom))}
+  .pbar button{position:relative;display:grid;justify-items:center;gap:3px;padding:7px 0 5px;font-size:11.5px;font-weight:600;color:var(--mut);border-radius:12px}
+  .pbar button .ic{width:21px;height:21px}
+  .pbar button.on{color:#fff}
+  .pbar button.on .ic{color:var(--red2)}
+  .pbar button b{position:absolute;top:2px;left:50%;margin-left:6px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--yel);color:#000;font-size:11px;display:grid;place-items:center}
+}
 
 /* mobile menu */
 .mmenu{position:fixed;inset:0;z-index:95;background:rgba(7,7,9,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;padding:100px 30px 40px;gap:4px;clip-path:circle(0% at calc(100% - 50px) 40px);transition:clip-path .7s var(--ease2)}
@@ -1114,15 +1248,26 @@ body.panelon main,body.panelon footer,body.panelon .ticker,body.panelon header.n
 </aside>
 
 <section id="panel" aria-label="Panel de pedidos">
-  <div class="pwrap">
-    <div class="ptop"><div class="brand"><img data-logo alt=""><div class="t">Panel de <em>pedidos</em><small>Full Llantas AQP · solo tienda</small></div></div><a class="btn gh sm" href="#top">Ver tienda</a></div>
-    <div class="pk" id="pK"></div>
-    <div class="pact"><button class="btn" id="pPaste"><i data-ic="plus"></i>Pegar pedido de WhatsApp</button><button class="btn gh" id="pSum"><i data-ic="copy"></i>Copiar resumen de hoy</button></div>
-    <p class="phelp">En WhatsApp mantén presionado el pedido, toca <b>Copiar</b> y luego <b>Pegar pedido</b> aquí. Los pedidos se guardan en este dispositivo.</p>
-    <div class="ptools"><div class="chips" id="pTabs"></div><div class="search"><i data-ic="search"></i><input id="pQ" type="search" placeholder="Buscar por nombre, celular o N° de pedido" aria-label="Buscar pedido"></div></div>
-    <div id="pList"></div>
+  <aside class="pside">
+    <div class="brand"><img data-logo alt=""><div class="t">Full Llantas <em>AQP</em><small>Panel de pedidos</small></div></div>
+    <div id="pNav"></div>
+    <div class="sp"></div>
+    <p class="note">Los pedidos se guardan en este dispositivo.</p>
+    <a class="pnav" href="#top"><i data-ic="back"></i>Volver a la tienda</a>
+  </aside>
+  <div class="pmain">
+    <header class="phead">
+      <img class="mlogo" data-logo alt="">
+      <div><h2 id="pTitle">Hoy</h2><div class="dt" id="pDate"></div></div>
+      <div class="search"><i data-ic="search"></i><input id="pQ" type="search" placeholder="Buscar nombre, celular o N° de pedido" aria-label="Buscar pedido"></div>
+      <button class="btn" id="pPaste"><i data-ic="plus"></i>Pegar pedido</button>
+    </header>
+    <div id="pView"></div>
   </div>
-  <div class="pbox" id="pBox"><div class="pbx"><h4>Pega aquí el pedido</h4><textarea id="pTxt" placeholder="Pega el mensaje completo que llegó por WhatsApp"></textarea><div class="pbb"><button class="btn gh sm" id="pCancel">Cancelar</button><button class="btn sm" id="pAdd">Agregar al panel</button></div></div></div>
+  <nav class="pbar" id="pBar" aria-label="Secciones del panel"></nav>
+  <div class="pscrim" id="pScrim"></div>
+  <aside class="psheet" id="pSheet" aria-label="Detalle del pedido"></aside>
+  <div class="pbox" id="pBox"><div class="pbx"><h4>Pega aquí el pedido</h4><p>En WhatsApp mantén presionado el mensaje del pedido, toca Copiar y pégalo aquí.</p><textarea id="pTxt" placeholder="Pega el mensaje completo que llegó por WhatsApp"></textarea><div class="pbb"><button class="pb" id="pCancel">Cancelar</button><button class="pb go" id="pAdd">Agregar al panel</button></div></div></div>
 </section>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><div class="mb" id="mb"></div></div>
 
@@ -1170,6 +1315,14 @@ const ICONS={
  flag:`<svg ${S1} stroke-width="1.8"><path d="M5 21V4M5 4h13l-2.5 4.5L18 13H5"/></svg>`,
  ne:`<svg ${S1} stroke-width="2.5"><path d="M7 17 17 7M8 7h9v9"/></svg>`,
  wa:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.6-.1 1.2Z"/></svg>`,
+ store:`<svg ${S1} stroke-width="1.8"><path d="M4 9h16l-1-5H5L4 9Z"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg>`,
+ truck:`<svg ${S1} stroke-width="1.8"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>`,
+ box:`<svg ${S1} stroke-width="1.8"><path d="M3 8 12 3l9 5v8l-9 5-9-5V8Z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>`,
+ home:`<svg ${S1} stroke-width="1.8"><path d="M4 11 12 4l8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg>`,
+ list:`<svg ${S1} stroke-width="1.8"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>`,
+ cal:`<svg ${S1} stroke-width="1.8"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>`,
+ trash:`<svg ${S1} stroke-width="1.8"><path d="M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"/></svg>`,
+ cash:`<svg ${S1} stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 9.5v5M17.5 9.5v5"/></svg>`,
  tiktok:`<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.7 5.7 0 1 0 4.9 5.7V9.1a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.2-1.6Z"/></svg>`
 };
 const ic=(n,c='')=>ICONS[n].replace('<svg',`<svg class="ic ${c}" aria-hidden="true"`);
@@ -1725,9 +1878,10 @@ $('#mb').onclick=e=>{if(!ms)return;let b;
   if((b=e.target.closest('#madd'))){const s=ms.p.sizes[ms.si];add(ms.p.id,s[0],ms.qty,b);setTimeout(openCart,650)}};
 
 /* ====== PANEL DE PEDIDOS (uso de la tienda, se guarda en este dispositivo) ====== */
-const PST={nuevo:['Por verificar','y'],confirmado:['Confirmado','g'],listo:['Lista','b'],entregado:['Entregada','k'],anulado:['Anulado','k']};
-const PTY={inst:['🔧','Instalación en tienda'],rec:['🏪','Recojo en tienda'],aqp:['🛵','Delivery en Arequipa'],pe:['📦','Envío a provincia']};
-let orders=ls.get('fl_panel',[]),ptab='act',pq='';
+const PST={nuevo:['Por verificar','y'],confirmado:['Confirmado','g'],listo:['Listo','b'],entregado:['Entregado','k'],anulado:['Anulado','k']};
+const PTY={inst:['wrench','Instalación en tienda','Instalación'],rec:['store','Recojo en tienda','Recojo'],aqp:['truck','Delivery en Arequipa','Delivery'],pe:['box','Envío a provincia','Provincia']};
+const FLOW=['nuevo','confirmado','listo','entregado'],PVS=[['hoy','home','Hoy'],['ped','list','Pedidos'],['age','cal','Agenda'],['prep','tire','Preparar'],['yape','cash','Yape']];
+let orders=ls.get('fl_panel',[]),pvw='hoy',pq='',pty='all',pcol='nuevo',pday=null,psel=null,pyAll=false,pclosed=false;
 const saveP=()=>ls.set('fl_panel',orders);
 function parseOrder(raw){
   const t=String(raw||'').replace(/\*/g,''),id=(t.match(/FL-\d{6}-\d{4}/)||[])[0];if(!id)return null;
@@ -1735,63 +1889,123 @@ function parseOrder(raw){
   let type='rec';if(/INSTALACI[ÓO]N EN TIENDA/i.test(t))type='inst';else if(/DELIVERY EN AREQUIPA/i.test(t))type='aqp';else if(/ENV[ÍI]O A PROVINCIA/i.test(t))type='pe';
   return{id,type,total:+(((t.match(/TOTAL\s+S\/\s*([\d,]+)/)||[])[1]||'0').replace(/,/g,'')),paid:/Yape\s*✅/u.test(t),op:(t.match(/operaci[oó]n:\s*(\d{6,12})/i)||[])[1]||'',
     w:w?{d:+w[1],m:+w[2],t:w[3].padStart(5,'0')}:null,name:cl?cl[1].trim():'Cliente',phone:cl?cl[2]:'',moto:((t.match(/🏍\uFE0F?\s*(.+)/u)||[])[1]||'').trim(),loc:((t.match(/📍\s*(.+)/u)||[])[1]||'').trim(),
-    items:[...t.matchAll(/^\s*(\d+\s*×\s*.+)$/gmu)].map(m=>m[1].trim()),status:'nuevo',at:Date.now()}}
-function addOrder(raw,demo){const o=parseOrder(raw);if(!o){toast('No encontré un pedido en ese texto');return false}if(orders.some(x=>x.id===o.id)){toast(`El pedido ${o.id} ya está en el panel`);return false}if(demo)o.demo=true;orders.push(o);saveP();return true}
-const isToday=ts=>{const a=new Date(ts),n=new Date();return a.toDateString()===n.toDateString()};
+    items:[...t.matchAll(/^\s*(\d+\s*×\s*.+)$/gmu)].map(m=>m[1].trim()),status:'nuevo',note:'',at:Date.now()}}
+function addOrder(raw,demo){const o=parseOrder(raw);if(!o){toast('No encontré un pedido en ese texto');return null}if(orders.some(x=>x.id===o.id)){toast(`El pedido ${o.id} ya está en el panel`);return null}if(demo)o.demo=true;orders.push(o);saveP();return o}
+const isToday=ts=>new Date(ts).toDateString()===new Date().toDateString();
+const p2=n=>String(n).padStart(2,'0');
 const wToday=o=>{const n=new Date();return !!o.w&&o.w.d===n.getDate()&&o.w.m===n.getMonth()+1};
 const wKey=o=>o.w?o.w.m*1e6+o.w.d*1e4+ +o.w.t.replace(':',''):9e9;
-const wTxt=o=>o.w?`${wToday(o)?'Hoy':String(o.w.d).padStart(2,'0')+'/'+String(o.w.m).padStart(2,'0')} · ${o.w.t} h`:'';
+const wTxt=o=>o.w?`${wToday(o)?'Hoy':p2(o.w.d)+'/'+p2(o.w.m)} · ${o.w.t} h`:'';
 const fphone=p=>p.replace(/(\d{3})(\d{3})(\d{3})/,'$1 $2 $3');
-function tpl(o,k){const f=o.name.split(' ')[0],cita=o.w?`el ${String(o.w.d).padStart(2,'0')}/${String(o.w.m).padStart(2,'0')} a las ${o.w.t} h`:'';
+const iQty=i=>parseInt(i)||1,iLab=i=>i.replace(/^\d+\s*×\s*/,'').replace(/\s*·\s*S\/\s*[\d,]+\s*$/,'');
+const nTires=o=>o.items.reduce((a,i)=>a+iQty(i)*(/Par:/.test(i)?2:1),0);
+const isAct=o=>FLOW.slice(0,3).includes(o.status);
+function pdays(){const out=[],n=new Date();for(let i=0;out.length<6&&i<9;i++){const d=new Date(n.getFullYear(),n.getMonth(),n.getDate()+i);if(d.getDay()===0&&i>0)continue;out.push({d:d.getDate(),m:d.getMonth()+1,lb:i===0?'Hoy':i===1?'Mañana':`${DOW[d.getDay()]} ${d.getDate()}`})}return out}
+function tpl(o,k){const f=o.name.split(' ')[0],cita=o.w?`el ${p2(o.w.d)}/${p2(o.w.m)} a las ${o.w.t} h`:'';
   return {ok:`Hola ${f} 👋 Verificamos tu Yape ✅ Tu pedido ${o.id} está confirmado.${o.type==='inst'?` Te esperamos ${cita} en la tienda para instalar tus llantas.`:o.type==='rec'?' Te avisamos apenas esté listo para recoger.':o.type==='aqp'?' Coordinamos la entrega en tu dirección.':' Te enviamos la guía de la agencia apenas despachemos.'}`,
     pay:`Hola ${f} 👋 Recibimos tu pedido ${o.id} y sí tenemos stock ✅ Para confirmarlo, yapea ${fmt(o.total)} al ${CFG.yape.num} y envíanos la captura.`,
     cita:`Hola ${f} 👋 Te recordamos tu cita ${cita} en Full Llantas AQP para instalar tus llantas (pedido ${o.id}). ¡Te esperamos!`,
     ready:`Hola ${f} 👋 Tu pedido ${o.id} ya está listo.${o.type==='rec'?' Puedes pasar a recogerlo cuando gustes.':o.type==='pe'?' Ya lo despachamos; te paso la guía de la agencia.':o.type==='aqp'?' Sale hoy a tu dirección.':''}`,
-    no:`Hola ${f}, sobre tu pedido ${o.id}: por ahora no tenemos stock de esa llanta 🙏 Te puedo ofrecer una alternativa en la misma medida. ¿Te parece?`}[k]}
+    no:`Hola ${f}, sobre tu pedido ${o.id}: por ahora no tenemos stock de esa llanta 🙏 Te puedo ofrecer una alternativa en la misma medida. ¿Te parece?`,
+    hi:`Hola ${f} 👋 Te escribimos de Full Llantas AQP por tu pedido ${o.id}.`}[k]}
 const waTo=(o,k,lb,cls)=>o.phone?`<a class="pb ${cls||'wa'}" target="_blank" rel="noopener" href="https://wa.me/51${o.phone}?text=${encodeURIComponent(tpl(o,k))}">${ic('wa')}${lb}</a>`:'';
-function poCard(o){const st=PST[o.status],ty=PTY[o.type];let a='';
-  if(o.status==='nuevo')a=`<button class="pb go" data-st="confirmado">${ic('check')}Pago verificado</button>${o.paid?'':waTo(o,'pay','Hay stock: pedir Yape')}${waTo(o,'no','Sin stock','dim')}<button class="pb dim" data-st="anulado">Anular</button>`;
-  else if(o.status==='confirmado')a=`${waTo(o,'ok','Confirmar al cliente')}${o.type==='inst'?waTo(o,'cita','Recordar cita'):''}<button class="pb go" data-st="listo">${ic('check')}${o.type==='inst'?'Instalada':'Lista'}</button>`;
-  else if(o.status==='listo')a=`${o.type==='inst'?'':waTo(o,'ready','Avisar que está lista')}<button class="pb go" data-st="entregado">${ic('check')}Entregada</button>`;
-  else a=`<button class="pb" data-st="nuevo">Reabrir</button><button class="pb dim" data-rmo>Borrar</button>`;
-  return `<article class="po st-${o.status}" data-o="${esc(o.id)}"><div class="poh"><b>${esc(o.id)}</b><span class="pill ${st[1]}">${st[0]}</span>${o.demo?'<span class="pill k">Ejemplo</span>':''}<em>${fmt(o.total)}</em></div>
-<div class="pot">${ty[0]} ${ty[1]}${o.w?' · '+wTxt(o):''}</div><div class="poc"><b>${esc(o.name)}</b>${o.phone?' · '+fphone(o.phone):''}${o.moto?' · '+esc(o.moto):''}</div>${o.loc?`<div class="pol">📍 ${esc(o.loc)}</div>`:''}
-<ul class="poi">${o.items.map(i=>`<li>${esc(i)}</li>`).join('')||'<li>Sin detalle de productos</li>'}</ul>
-<div class="pop">${o.paid?`Yape ✅ · N° de operación <b>${esc(o.op||'—')}</b>`:'Yape ⏳ <b>aún no pagó</b>: pidió confirmar stock'}</div><div class="poa">${a}</div></article>`}
+const nextOf=o=>({nuevo:['confirmado','Pago verificado'],confirmado:['listo',o.type==='inst'?'Instalada':o.type==='pe'?'Despachado':'Lista'],listo:['entregado','Entregado']}[o.status]);
+const stag=o=>`<span class="stag ${PST[o.status][1]}">${o.status==='nuevo'&&!o.paid?'Sin pagar':PST[o.status][0]}</span>`;
+function orow(o){const ty=PTY[o.type],nx=nextOf(o),n=nTires(o);
+  return `<article class="orow" data-o="${esc(o.id)}"><div class="oty t-${o.type}">${ic(ty[0])}</div>
+<div><div class="o1"><b>${esc(o.name)}</b>${stag(o)}${o.demo?'<span class="stag ex">Ejemplo</span>':''}</div>
+<div class="o2">${ty[1]}${o.w?' · '+wTxt(o):''}${o.loc?' · '+esc(o.loc):''}</div>
+<div class="o3">${esc(o.id)} · ${n} ${n===1?'llanta':'llantas'}${o.moto?' · '+esc(o.moto):''}${o.paid?' · Yape '+esc(o.op):''}</div></div>
+<div class="oend"><b>${fmt(o.total)}</b>${o.status==='nuevo'&&!o.paid?waTo(o,'pay','Pedir Yape'):nx?`<button class="pb go" data-st="${nx[0]}">${ic('check')}${nx[1]}</button>`:''}</div></article>`}
+const omini=o=>`<button class="omini st-${o.status}" data-o="${esc(o.id)}"><b>${esc(o.name)}</b><span>${nTires(o)} ${nTires(o)===1?'llanta':'llantas'}${o.moto?' · '+esc(o.moto):''}</span></button>`;
+const sec=(t,n,body,extra)=>`<section class="psec"><h3>${t}${n==null?'':`<span>${n}</span>`}${extra||''}</h3>${body}</section>`;
+const pok=(t,d)=>`<div class="pok"><i>${ic('check')}</i><div><b>${t}</b>${d}</div></div>`;
+function slots(day){const n=new Date(),td=day.d===n.getDate()&&day.m===n.getMonth()+1,l=orders.filter(o=>isAct(o)&&o.type==='inst'&&o.w&&o.w.d===day.d&&o.w.m===day.m),ts=[...new Set([...CFG.slots,...l.map(o=>o.w.t)])].sort();
+  return `<div class="pcard">${ts.map(t=>{const os=l.filter(o=>o.w.t===t);return `<div class="slot${td&&+t.slice(0,2)<n.getHours()?' past':''}"><time>${t}</time>${os.length?`<div class="stack">${os.map(omini).join('')}</div>`:'<span class="free">Libre</span>'}</div>`}).join('')}</div>`}
+function prep(){const m=new Map();for(const o of orders.filter(x=>x.status==='confirmado'))for(const i of o.items){const k=iLab(i),e=m.get(k)||{q:0,who:[]};e.q+=iQty(i);e.who.push(o.name.split(' ')[0]);m.set(k,e)}return [...m].sort((a,b)=>b[1].q-a[1].q)}
+const prepHtml=l=>l.length?`<div class="pcard">${l.map(([k,e])=>`<div class="prow"><b>${e.q}<small>×</small></b><div><b>${esc(k)}</b><span>Para ${esc([...new Set(e.who)].join(', '))}</span></div></div>`).join('')}</div>`:pok('Nada por preparar','Aparecen aquí las llantas de los pedidos confirmados.');
+function vHoy(){
+  const act=orders.filter(isAct),nv=act.filter(o=>o.status==='nuevo').sort((a,b)=>a.at-b.at),ent=act.filter(o=>o.type!=='inst'&&o.status!=='nuevo'),td=pdays()[0],pr=prep();
+  const conf=orders.filter(o=>isToday(o.at)&&['confirmado','listo','entregado'].includes(o.status)).reduce((a,o)=>a+o.total,0);
+  return `<div class="pk"><button class="${nv.length?'hot':''}" data-pv="ped" data-col="nuevo"><i>${ic('eye')}</i><div><b>${nv.length}</b><span>Por verificar</span></div></button>
+<button data-pv="age"><i>${ic('wrench')}</i><div><b>${act.filter(o=>o.type==='inst'&&wToday(o)).length}</b><span>Instalaciones hoy</span></div></button>
+<button data-pv="ped" data-col="confirmado"><i>${ic('box')}</i><div><b>${ent.length}</b><span>Por entregar o enviar</span></div></button>
+<button data-pv="yape"><i>${ic('cash')}</i><div><b>${fmt(conf)}</b><span>Confirmado hoy</span></div></button></div>
+<div class="pgrid2"><div>${sec('Atender ahora',nv.length,nv.length?nv.map(orow).join(''):pok('Todo al día','No hay pedidos nuevos por revisar.'))}${sec('Entregas y envíos pendientes',ent.length,ent.length?ent.map(orow).join(''):pok('Sin entregas pendientes','Recojos, delivery y envíos confirmados aparecen aquí.'))}</div>
+<div>${sec('Agenda de hoy',null,slots(td),`<button data-pv="age">Ver semana ${ic('arrow')}</button>`)}${sec('Llantas por preparar',pr.reduce((a,x)=>a+x[1].q,0),prepHtml(pr.slice(0,5)),pr.length>5?`<button data-pv="prep">Ver todo ${ic('arrow')}</button>`:'')}</div></div>`}
+function vPed(){
+  const tyc=k=>orders.filter(o=>isAct(o)&&(k==='all'||o.type===k)).length;
+  if(pq){const q=pq.toLowerCase(),l=orders.filter(o=>(o.id+o.name+o.phone+o.moto+o.items.join(' ')+o.op).toLowerCase().includes(q)).sort((a,b)=>b.at-a.at);return sec(`Resultados para “${esc(pq)}”`,l.length,l.length?l.map(orow).join(''):pok('Sin resultados','Prueba con el nombre, el celular o el N° de pedido.'))}
+  const f=o=>pty==='all'||o.type===pty,C={nuevo:'#ffd200',confirmado:'#28e070',listo:'#4ea1ff'};
+  const cols=FLOW.slice(0,3).map(k=>{const l=orders.filter(o=>o.status===k&&f(o)).sort((a,b)=>k==='confirmado'?wKey(a)-wKey(b)||a.at-b.at:a.at-b.at);return [k,l]});
+  const cl=orders.filter(o=>!isAct(o)&&f(o)).sort((a,b)=>b.at-a.at);
+  return `<div class="ptys"><button class="chip${pty==='all'?' on':''}" data-pty="all">Todos<b>${tyc('all')}</b></button>${Object.entries(PTY).map(([k,v])=>`<button class="chip${pty===k?' on':''}" data-pty="${k}">${v[2]}<b>${tyc(k)}</b></button>`).join('')}</div>
+<div class="bsel">${cols.map(([k,l])=>`<button class="${pcol===k?'on':''}" data-pcol="${k}">${PST[k][0]}<b>${l.length}</b></button>`).join('')}</div>
+<div class="board">${cols.map(([k,l])=>`<div class="bcol${pcol===k?' cur':''}" style="--c:${C[k]}"><h4>${PST[k][0]}<span>${l.length}</span></h4>${l.length?l.map(orow).join(''):'<div class="none">Sin pedidos</div>'}</div>`).join('')}</div>
+${cl.length?`<button class="pmore" data-closed>${pclosed?'Ocultar':'Ver'} entregados y anulados (${cl.length})</button>${pclosed?`<div class="cmp" style="max-width:560px">${cl.map(orow).join('')}</div>`:''}`:''}`}
+function vAge(){const ds=pdays();if(!pday||!ds.some(d=>d.d===pday.d&&d.m===pday.m))pday=ds[0];
+  const cnt=d=>orders.filter(o=>isAct(o)&&o.type==='inst'&&o.w&&o.w.d===d.d&&o.w.m===d.m).length,old=orders.filter(o=>isAct(o)&&o.type==='inst'&&(!o.w||!ds.some(d=>d.d===o.w.d&&d.m===o.w.m)));
+  return `<div class="ptys">${ds.map((d,i)=>`<button class="chip${d.d===pday.d&&d.m===pday.m?' on':''}" data-pday="${i}">${d.lb}<b>${cnt(d)}</b></button>`).join('')}</div>
+<div class="pgrid2"><div>${sec(`Instalaciones · ${pday.lb} ${p2(pday.d)}/${p2(pday.m)}`,cnt(pday),slots(pday))}</div><div>${old.length?sec('Fuera de la semana o sin horario',old.length,old.map(orow).join('')):''}${sec('Cómo leer la agenda',null,`<div class="pcard" style="padding:14px;font-size:14px;color:var(--mut);line-height:1.6">Cada cliente elige su horario al comprar. La barra de color indica el estado: <b style="color:var(--yel)">amarillo</b> falta verificar el pago, <b style="color:#4fe08a">verde</b> confirmado, <b style="color:#7dbbff">azul</b> ya instalada.</div>`)}</div></div>`}
+function vPrep(){const pr=prep(),pend=orders.filter(o=>o.status==='nuevo');
+  return `<div class="pgrid2"><div>${sec('Separar del almacén',pr.reduce((a,x)=>a+x[1].q,0),prepHtml(pr))}</div><div>${sec('Aún no separar: falta verificar',pend.length,pend.length?pend.map(orow).join(''):pok('Sin pendientes','Todos los pedidos tienen el pago revisado.'))}</div></div>`}
+function vYape(){const l=orders.filter(o=>o.status!=='anulado'&&(pyAll||isToday(o.at))).sort((a,b)=>b.at-a.at),sum=f=>l.filter(f).reduce((a,o)=>a+o.total,0);
+  return `<div class="ptys"><button class="chip${pyAll?'':' on'}" data-pyall="0">Hoy</button><button class="chip${pyAll?' on':''}" data-pyall="1">Todos</button></div>
+<div class="ytot"><div class="v"><b>${fmt(sum(o=>o.paid&&o.status!=='nuevo'))}</b><span>Verificado</span></div><div class="p"><b>${fmt(sum(o=>o.paid&&o.status==='nuevo'))}</b><span>Por verificar</span></div><div><b>${l.filter(o=>!o.paid).length}</b><span>Pedidos sin pagar</span></div></div>
+${sec('Cuadre con tu app Yape',l.length,l.length?`<div class="pcard">${l.map(o=>`<div class="yline" data-o="${esc(o.id)}"><div class="op">${o.paid?esc(o.op||'—'):'—'}<small>${o.paid?'N° de operación':'Aún no yapeó'}</small></div><div class="who"><b>${esc(o.name)}</b><span>${esc(o.id)}</span></div><div class="am">${fmt(o.total)}</div><div class="act">${o.status==='nuevo'&&o.paid?`<button class="pb go" data-st="confirmado">${ic('check')}Verificar</button>`:stag(o)}</div></div>`).join('')}</div>`:pok('Sin movimientos','Aquí aparecen los Yape de los pedidos del día.'),`<button id="pSum">${ic('copy')}Copiar cuadre</button>`)}`}
+function drawSheet(){const sh=$('#pSheet'),o=orders.find(x=>x.id===psel);$('#pScrim').classList.toggle('on',!!o);sh.classList.toggle('on',!!o);if(!o)return;
+  const ty=PTY[o.type],ix=FLOW.indexOf(o.status),nx=nextOf(o);
+  sh.dataset.o=o.id;
+  sh.innerHTML=`<div class="psh"><div class="oty t-${o.type}">${ic(ty[0])}</div><h3>${esc(o.id)}</h3><button class="x" data-psx aria-label="Cerrar">${ic('x')}</button></div>
+<div class="psb"><div class="flow${o.status==='entregado'?' end':o.status==='anulado'?' nul':''}">${FLOW.map((k,i)=>`<div class="${i<ix?'done':i===ix?'on':''}">${PST[k][0]}</div>`).join('')}</div>
+${o.status==='anulado'?'<div class="pblk"><p><b>Pedido anulado</b></p></div>':''}
+<div class="pblk"><small>Cliente</small><p><b>${esc(o.name)}</b>${o.demo?' <span>(ejemplo)</span>':''}<br>${o.phone?fphone(o.phone):'Sin celular'}${o.moto?` <span>· ${esc(o.moto)}</span>`:''}</p></div>
+<div class="pblk"><small>Entrega</small><p><b>${ty[1]}</b>${o.w?`<br>${wToday(o)?'Hoy':p2(o.w.d)+'/'+p2(o.w.m)} a las ${o.w.t} h`:''}${o.loc?`<br><span>${esc(o.loc)}</span>`:''}</p></div>
+<div class="pblk"><small>Llantas</small><ul>${o.items.map(i=>`<li><i>${iQty(i)}×</i><span>${esc(iLab(i))}</span></li>`).join('')||'<li><i>—</i><span>Sin detalle</span></li>'}</ul></div>
+<div class="pblk"><small>Pago</small><div class="tt"><p>${o.paid?`Yape · N° de operación <b>${esc(o.op||'—')}</b>`:'<b>Aún no yapeó</b><br><span>Pidió confirmar stock primero</span>'}</p><b>${fmt(o.total)}</b></div></div>
+<div class="pblk"><small>Escribir al cliente</small><div class="pwa">${o.status==='nuevo'?(o.paid?'':waTo(o,'pay','Hay stock: pedir Yape'))+waTo(o,'no','Sin stock','pb'):''}${o.status==='confirmado'?waTo(o,'ok','Pago confirmado')+(o.type==='inst'?waTo(o,'cita','Recordar cita'):''):''}${o.status==='listo'&&o.type!=='inst'?waTo(o,'ready','Ya está listo'):''}${waTo(o,'hi','Abrir chat','pb')}</div></div>
+<div class="pblk"><small>Nota interna</small><textarea id="pNote" placeholder="Ej. llega con la moto a las 4, separar en estante 2">${esc(o.note||'')}</textarea></div></div>
+<div class="psf">${nx?`<button class="pb go" data-st="${nx[0]}">${ic('check')}Marcar: ${nx[1]}</button>`:''}<div class="row">${ix>0?`<button class="pb" data-st="${FLOW[ix-1]}">Volver a ${PST[FLOW[ix-1]][0].toLowerCase()}</button>`:''}${isAct(o)?`<button class="pb dim" data-st="anulado">Anular</button>`:`${o.status==='anulado'?`<button class="pb" data-st="nuevo">Reabrir</button>`:''}<button class="pb dim" data-rmo>${ic('trash')}Borrar</button>`}</div></div>`}
 function drawPanel(){
-  const act=orders.filter(o=>['nuevo','confirmado','listo'].includes(o.status)),nv=orders.filter(o=>o.status==='nuevo').length;
-  $('#pK').innerHTML=`<div class="${nv?'hot':''}"><b>${nv}</b><span>Por verificar</span></div><div><b>${act.filter(o=>o.type==='inst'&&wToday(o)).length}</b><span>Instalaciones hoy</span></div><div><b>${act.length}</b><span>Pedidos activos</span></div><div><b>${fmt(orders.filter(o=>isToday(o.at)&&['confirmado','listo','entregado'].includes(o.status)).reduce((a,o)=>a+o.total,0))}</b><span>Confirmado hoy</span></div>`;
-  const T=[['act','Activos',act.length],['nuevo','Por verificar',nv],['confirmado','Confirmados',orders.filter(o=>o.status==='confirmado').length],['listo','Listas',orders.filter(o=>o.status==='listo').length],['agenda','Agenda',act.filter(o=>o.type==='inst').length],['fin','Cerrados',orders.filter(o=>['entregado','anulado'].includes(o.status)).length]];
-  $('#pTabs').innerHTML=T.map(([k,n,c])=>`<button class="chip${ptab===k?' on':''}" data-pt="${k}">${n}<b>${c}</b></button>`).join('');
-  let l=ptab==='act'?act:ptab==='agenda'?act.filter(o=>o.type==='inst'):ptab==='fin'?orders.filter(o=>['entregado','anulado'].includes(o.status)):orders.filter(o=>o.status===ptab);
-  if(pq){const q=pq.toLowerCase();l=l.filter(o=>(o.id+o.name+o.phone+o.moto+o.items.join(' ')).toLowerCase().includes(q))}
-  const ord={nuevo:0,confirmado:1,listo:2,entregado:3,anulado:4};
-  l=[...l].sort(ptab==='agenda'?(a,b)=>wKey(a)-wKey(b):(a,b)=>ord[a.status]-ord[b.status]||b.at-a.at);
-  let h='';
-  if(!orders.length)h=`<div class="pempty"><b>Aún no hay pedidos</b>Cuando llegue un pedido por WhatsApp, cópialo y pégalo aquí para darle seguimiento.<br><button class="btn gh sm" id="pDemo">Cargar pedidos de ejemplo</button></div>`;
-  else if(!l.length)h=`<div class="pempty"><b>Nada por aquí</b>No hay pedidos en esta vista.</div>`;
-  else if(ptab==='agenda'){let last='';for(const o of l){const d=o.w?(wToday(o)?'Hoy':`${String(o.w.d).padStart(2,'0')}/${String(o.w.m).padStart(2,'0')}`):'Sin fecha';if(d!==last){h+=`<div class="pday">${d}</div>`;last=d}h+=poCard(o)}}
-  else h=l.map(poCard).join('');
-  $('#pList').innerHTML=h;
+  const nv=orders.filter(o=>o.status==='nuevo').length,n=new Date(),cnt={hoy:0,ped:orders.filter(isAct).length,age:orders.filter(o=>isAct(o)&&o.type==='inst').length,prep:prep().reduce((a,x)=>a+x[1].q,0),yape:0};
+  $('#pNav').innerHTML=PVS.map(([k,i,l])=>`<button class="pnav${pvw===k?' on':''}${k==='ped'&&nv?' hot':''}" data-pv="${k}">${ic(i)}${l}${k==='ped'&&nv?`<b>${nv}</b>`:cnt[k]?`<b>${cnt[k]}</b>`:''}</button>`).join('');
+  $('#pBar').innerHTML=PVS.map(([k,i,l])=>`<button class="${pvw===k?'on':''}" data-pv="${k}">${ic(i)}${l}${k==='ped'&&nv?`<b>${nv}</b>`:''}</button>`).join('');
+  $('#pTitle').textContent={hoy:'Hoy',ped:'Pedidos',age:'Agenda',prep:'Preparar',yape:'Yape'}[pvw];
+  $('#pDate').textContent=`${DOWL[n.getDay()]} ${n.getDate()} de ${MES[n.getMonth()]}`;
+  $('#pView').innerHTML=!orders.length?`<div class="pempty"><b>Aún no hay pedidos</b>Así entra un pedido al panel:<ol><li>Llega el pedido por WhatsApp.</li><li>Mantén presionado el mensaje y toca Copiar.</li><li>Toca “Pegar pedido” aquí arriba.</li></ol><button class="btn gh sm" id="pDemo">Cargar pedidos de ejemplo</button></div>`:{hoy:vHoy,ped:vPed,age:vAge,prep:vPrep,yape:vYape}[pvw]();
+  drawSheet();
 }
-function demoOrders(){const n=new Date(),dd=String(n.getDate()).padStart(2,'0'),mm=String(n.getMonth()+1).padStart(2,'0'),y=String(n.getFullYear()).slice(2),id=k=>`FL-${y}${mm}${dd}-${k}`;
-  [`🛞 *PEDIDO ${id(4821)}* · S/ 1,550 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · hoy ${dd}/${mm} · 10:00 h\n\n👤 Carlos Mamani · 987654321\n🏍 Yamaha R1\n\n*LLANTAS*\n1 × Combo Sportmax Q5 · Par: 120/70 ZR17 + 190/55 ZR17 · S/ 1,550\n\n*TOTAL S/ 1,550*\n\n💜 Yape · N° de operación: 48213377\n📎 Adjunto mi captura`,
-   `🛞 *PEDIDO ${id(5173)}* · S/ 648 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · hoy ${dd}/${mm} · 16:00 h\n\n👤 Lucía Quispe · 956112233\n🏍 KTM Duke 390\n\n*LLANTAS*\n1 × DUNLOP Sportmax GPR-300 · 110/70 R17 · Delantera · S/ 349\n1 × DUNLOP Sportmax GPR-300 · 150/60 R17 · Trasera · S/ 399\n\n*TOTAL S/ 648*\n\n💜 Yape · N° de operación: 51730984\n📎 Adjunto mi captura`,
+function demoOrders(){const ds=pdays(),a=ds[0],b=ds[1],y=String(new Date().getFullYear()).slice(2),id=k=>`FL-${y}${p2(a.m)}${p2(a.d)}-${k}`,f=d=>`${p2(d.d)}/${p2(d.m)}`;
+  [`🛞 *PEDIDO ${id(4821)}* · S/ 1,550 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · ${f(a)} · 10:00 h\n\n👤 Carlos Mamani · 987654321\n🏍 Yamaha R1\n\n*LLANTAS*\n1 × Combo Sportmax Q5 · Par: 120/70 ZR17 + 190/55 ZR17 · S/ 1,550\n\n*TOTAL S/ 1,550*\n\n💜 Yape · N° de operación: 48213377\n📎 Adjunto mi captura`,
+   `🛞 *PEDIDO ${id(5173)}* · S/ 748 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · ${f(a)} · 16:00 h\n\n👤 Lucía Quispe · 956112233\n🏍 KTM Duke 390\n\n*LLANTAS*\n1 × DUNLOP Sportmax GPR-300 · 110/70 R17 · Delantera · S/ 349\n1 × DUNLOP Sportmax GPR-300 · 150/60 R17 · Trasera · S/ 399\n\n*TOTAL S/ 748*\n\n💜 Yape · N° de operación: 51730984\n📎 Adjunto mi captura`,
    `🛞 *PEDIDO ${id(6040)}* · S/ 499 · Yape ⏳ pendiente\n📦 *ENVÍO A PROVINCIA*\n📍 Cusco · Agencia: Shalom\n\n👤 Diego Huamán · 944556677\n🏍 Yamaha MT-09\n\n*LLANTAS*\n1 × CST Adreno Sport · 180/55 ZR17 · Trasera · S/ 499\n\nFlete: por coordinar\n*TOTAL S/ 499*\n\n⏳ Aún no yapeo: quiero confirmar stock primero.`,
-   `🛞 *PEDIDO ${id(7265)}* · S/ 289 · Yape ✅\n🛵 *DELIVERY EN AREQUIPA*\n📍 Av. Ejército 710, Yanahuara\n\n👤 Renzo Flores · 931778899\n\n*LLANTAS*\n1 × DUNLOP Sportmax Q-Lite · 130/70-17 · Trasera · S/ 279\n\nDelivery: S/ 10\n*TOTAL S/ 289*\n\n💜 Yape · N° de operación: 72650012\n📎 Adjunto mi captura`].forEach(m=>addOrder(m,true));
-  const b=orders.find(o=>o.id===id(5173));if(b)b.status='confirmado';saveP();drawPanel()}
-function pasteOrder(t){if(addOrder(t)){ptab='act';drawPanel();toast('Pedido agregado al panel');return true}return false}
+   `🛞 *PEDIDO ${id(7265)}* · S/ 289 · Yape ✅\n🛵 *DELIVERY EN AREQUIPA*\n📍 Av. Ejército 710, Yanahuara\n\n👤 Renzo Flores · 931778899\n\n*LLANTAS*\n1 × DUNLOP Sportmax Q-Lite · 130/70-17 · Trasera · S/ 279\n\nDelivery: S/ 10\n*TOTAL S/ 289*\n\n💜 Yape · N° de operación: 72650012\n📎 Adjunto mi captura`,
+   `🛞 *PEDIDO ${id(8112)}* · S/ 698 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · ${f(b)} · 09:00 h\n\n👤 Andrea Salas · 912334455\n🏍 Kawasaki Ninja 400\n\n*LLANTAS*\n2 × DUNLOP Sportmax GPR-300 · 110/70 R17 · Delantera · S/ 698\n\n*TOTAL S/ 698*\n\n💜 Yape · N° de operación: 81120457\n📎 Adjunto mi captura`,
+   `🛞 *PEDIDO ${id(9034)}* · S/ 629 · Yape ✅\n🏪 *RECOJO EN TIENDA* (sin instalación)\n\n👤 Marco Ccori · 978001122\n🏍 Honda CBR600RR\n\n*LLANTAS*\n1 × CST Ride Migra CM-S5 · 190/55 ZR17 · Trasera · S/ 629\n\n*TOTAL S/ 629*\n\n💜 Yape · N° de operación: 90340781\n📎 Adjunto mi captura`].forEach(m=>addOrder(m,true));
+  const st={5173:'confirmado',8112:'confirmado',9034:'listo'};for(const k in st){const o=orders.find(x=>x.id===id(k));if(o)o.status=st[k]}saveP();drawPanel()}
+function pasteOrder(t){const o=addOrder(t);if(!o)return false;pvw='hoy';psel=o.id;drawPanel();toast(`Pedido ${o.id} agregado`);return true}
+function setSt(o,st){o.status=st;saveP();drawPanel();toast(`${o.name.split(' ')[0]}: ${st==='nuevo'?'por verificar':PST[st][0].toLowerCase()}`)}
 $('#pPaste').onclick=()=>{const open=()=>{$('#pTxt').value='';$('#pBox').classList.add('on');$('#pTxt').focus()};try{navigator.clipboard.readText().then(t=>{if(!(t&&/FL-\d{6}-\d{4}/.test(t)&&pasteOrder(t)))open()}).catch(open)}catch(e){open()}};
 $('#pCancel').onclick=()=>$('#pBox').classList.remove('on');
 $('#pAdd').onclick=()=>{if(pasteOrder($('#pTxt').value))$('#pBox').classList.remove('on')};
-$('#pQ').oninput=e=>{pq=e.target.value.trim();drawPanel()};
-$('#pSum').onclick=()=>{const t=orders.filter(o=>isToday(o.at)&&o.status!=='anulado'),tx=`Full Llantas AQP · pedidos de hoy (${t.length})\n`+t.map(o=>`${o.id} · ${PST[o.status][0]} · ${PTY[o.type][1]}${o.w?' '+wTxt(o):''} · ${o.name} · ${fmt(o.total)}`).join('\n')+`\nTotal: ${fmt(t.reduce((a,o)=>a+o.total,0))}`;try{navigator.clipboard.writeText(tx).then(()=>toast('Resumen copiado')).catch(()=>toast('No se pudo copiar'))}catch(e){toast('No se pudo copiar')}};
-$('#panel').addEventListener('click',e=>{let b;
-  if((b=e.target.closest('[data-pt]'))){ptab=b.dataset.pt;drawPanel();return}
-  if(e.target.closest('#pDemo')){demoOrders();return}
-  const card=e.target.closest('.po');if(!card)return;const o=orders.find(x=>x.id===card.dataset.o);if(!o)return;
-  if((b=e.target.closest('[data-st]'))){o.status=b.dataset.st;saveP();drawPanel();toast(`${o.id}: ${PST[o.status][0]}`);return}
-  if(e.target.closest('[data-rmo]')){orders=orders.filter(x=>x!==o);saveP();drawPanel()}});
+$('#pQ').oninput=e=>{pq=e.target.value.trim();if(pq)pvw='ped';drawPanel()};
+$('#pScrim').onclick=()=>{psel=null;drawSheet()};
+$('#panel').addEventListener('input',e=>{if(e.target.id==='pNote'){const o=orders.find(x=>x.id===psel);if(o){o.note=e.target.value;saveP()}}});
+$('#panel').addEventListener('click',e=>{const c=q=>e.target.closest(q);let b;
+  if((b=c('[data-pv]'))){pvw=b.dataset.pv;if(b.dataset.col)pcol=b.dataset.col;pq='';$('#pQ').value='';psel=null;drawPanel();scrollTo(0,0);return}
+  if(c('#pDemo')){demoOrders();return}
+  if(c('[data-psx]')){psel=null;drawSheet();return}
+  if((b=c('[data-pty]'))){pty=b.dataset.pty;drawPanel();return}
+  if((b=c('[data-pcol]'))){pcol=b.dataset.pcol;drawPanel();return}
+  if((b=c('[data-pday]'))){pday=pdays()[+b.dataset.pday];drawPanel();return}
+  if((b=c('[data-pyall]'))){pyAll=b.dataset.pyall==='1';drawPanel();return}
+  if(c('[data-closed]')){pclosed=!pclosed;drawPanel();return}
+  if(c('#pSum')){const t=orders.filter(o=>o.status!=='anulado'&&(pyAll||isToday(o.at))),tx=`Full Llantas AQP · cuadre de Yape (${t.length} pedidos)\n`+t.map(o=>`${o.paid?'Op. '+o.op:'Sin pagar'} · ${fmt(o.total)} · ${o.name} · ${o.id} · ${PST[o.status][0]}`).join('\n')+`\nVerificado: ${fmt(t.filter(o=>o.paid&&o.status!=='nuevo').reduce((a,o)=>a+o.total,0))}`;try{navigator.clipboard.writeText(tx).then(()=>toast('Cuadre copiado')).catch(()=>toast('No se pudo copiar'))}catch(x){toast('No se pudo copiar')}return}
+  if(c('a.pb'))return;
+  const host=c('[data-o]'),o=host&&orders.find(x=>x.id===host.dataset.o);if(!o)return;
+  if((b=c('[data-st]'))){setSt(o,b.dataset.st);return}
+  if(c('[data-rmo]')){orders=orders.filter(x=>x!==o);psel=null;saveP();drawPanel();return}
+  if(host.id!=='pSheet'){psel=o.id;drawSheet()}});
 function route(){const on=location.hash==='#panel';document.body.classList.toggle('panelon',on);if(on){closeAll();document.body.classList.remove('menu-open');drawPanel();scrollTo(0,0)}}
 addEventListener('hashchange',route);
 
@@ -1808,7 +2022,14 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)retur
 $$('[data-count]').forEach(el=>cio.observe(el));
 
 /* ====== ARRANQUE ====== */
-render();drawDrawer();rsS();route();
+try{history.scrollRestoration='manual'}catch(e){}
+const clearHash=()=>{try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}};
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const h=a.getAttribute('href');if(h==='#'||h==='#panel')return;e.preventDefault();
+  if(document.body.classList.contains('panelon')){clearHash();if(location.hash==='#panel')location.hash='';route()}
+  const t=h==='#top'?null:document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth'});else scrollTo({top:0,behavior:'smooth'})});
+if(location.hash&&location.hash!=='#panel')clearHash();
+const toTop=()=>{if(location.hash!=='#panel')scrollTo({top:0,behavior:'instant'})};
+render();drawDrawer();rsS();route();toTop();addEventListener('load',toTop);addEventListener('pageshow',toTop);
 requestAnimationFrame(tick);if(!rm)requestAnimationFrame(sparkLoop);
 const pct=$('#pct'),pbar=$('#pbar'),pre=$('#pre');let pv=0;
 const ptick=()=>{pv=Math.min(100,pv+(100-pv)*.09+1.2);pct.textContent=Math.floor(pv)+'%';pbar.style.width=pv+'%';if(pv<100)setTimeout(ptick,26);else{pre.classList.add('out');setTimeout(()=>{pre.classList.add('gone');document.body.classList.add('loaded');rsS()},650);setTimeout(()=>pre.remove(),1600)}};

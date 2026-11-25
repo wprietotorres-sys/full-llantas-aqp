@@ -619,6 +619,62 @@ footer .about{color:var(--mut);font-size:15px;margin:16px 0 20px;max-width:340px
 .mi .inc{display:flex;gap:8px;align-items:center;font-size:14px;color:#b9b9c2;margin-top:14px}
 .mi .inc .ic{width:16px;height:16px;color:#4fe08a}
 
+/* panel de pedidos */
+#panel{display:none;position:relative;z-index:2;min-height:100vh;padding:22px 0 80px}
+body.panelon #panel{display:block}
+body.panelon main,body.panelon footer,body.panelon .ticker,body.panelon header.nav,body.panelon .fab,body.panelon .mbar,body.panelon .demo,body.panelon #prog{display:none!important}
+.pwrap{width:min(1040px,100% - 28px);margin-inline:auto}
+.ptop{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+.ptop .btn{flex-shrink:0}
+.ptop .brand{flex-shrink:1}
+.pk{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.pk div{border-radius:16px;background:var(--card);border:1px solid var(--line);padding:14px 16px}
+.pk b{display:block;font-family:var(--fd);font-weight:900;font-style:italic;font-size:40px;line-height:1;white-space:nowrap}
+.pk span{font-size:13px;color:var(--mut)}
+.pk div.hot{border-color:rgba(255,210,0,.5);background:rgba(255,210,0,.07)}
+.pk div.hot b{color:var(--yel)}
+.pact{display:flex;gap:10px;flex-wrap:wrap}
+.pact .btn{flex:1 1 240px;height:54px}
+.phelp{font-size:13.5px;color:var(--mut);margin:12px 2px 18px}
+.phelp b{color:#fff}
+.ptools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.ptools .chips{flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.ptools .chips::-webkit-scrollbar{display:none}
+.ptools .chip b{margin-left:6px;opacity:.75}
+.ptools .search{flex:1 1 100%}
+.pday{font-family:var(--fd);font-weight:800;font-style:italic;font-size:22px;text-transform:uppercase;margin:18px 2px 8px;color:#fff}
+.po{border-radius:18px;background:var(--card);border:1px solid var(--line);border-left:5px solid #3a3a45;padding:14px 16px;margin-bottom:10px;animation:cin .4s var(--ease) both}
+.po.st-nuevo{border-left-color:var(--yel)}.po.st-confirmado{border-left-color:#28e070}.po.st-listo{border-left-color:#4ea1ff}.po.st-entregado,.po.st-anulado{opacity:.7}
+.poh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.poh b{font-family:var(--fd);font-weight:800;font-size:21px;letter-spacing:.03em}
+.poh em{margin-left:auto;font-style:italic;font-family:var(--fd);font-weight:900;font-size:27px;white-space:nowrap}
+.pill.g{background:#1fb855;color:#fff}.pill.b{background:#2f7fe0;color:#fff}
+.pot{font-weight:600;font-size:15.5px;margin:8px 0 2px}
+.poc{font-size:15px;color:#d5d5db}
+.poc b{color:#fff}
+.pol{font-size:14px;color:var(--mut);margin-top:2px}
+.poi{list-style:none;margin:10px 0;padding:10px 12px;border-radius:12px;background:#0c0c0f;border:1px solid #1d1d24;font-size:14.5px;color:#d5d5db;display:grid;gap:5px}
+.pop{font-size:14px;color:var(--mut)}
+.pop b{color:#fff}
+.poa{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.poa .pb{height:44px;padding:0 14px;border-radius:12px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:7px;background:#1b1b22;border:1px solid #2e2e38;white-space:nowrap;transition:.2s}
+.poa .pb:hover{border-color:#666}
+.poa .pb.go{background:var(--red);border-color:var(--red)}
+.poa .pb.wa{background:rgba(31,184,85,.14);border-color:rgba(31,184,85,.5);color:#6ff0a4}
+.poa .pb.dim{color:var(--mut)}
+.poa .pb .ic{width:16px;height:16px}
+.pempty{text-align:center;padding:46px 18px;border:1px dashed #2d2d36;border-radius:20px;color:var(--mut)}
+.pempty b{display:block;font-family:var(--fd);font-style:italic;font-size:28px;color:#fff;text-transform:uppercase;margin-bottom:6px}
+.pempty .btn{margin-top:16px}
+.pbox{position:fixed;inset:0;z-index:160;background:rgba(0,0,0,.7);display:none;place-items:center;padding:16px}
+.pbox.on{display:grid}
+.pbx{width:min(560px,100%);background:#0e0e12;border:1px solid var(--line);border-radius:22px;padding:20px}
+.pbx h4{font-family:var(--fd);font-weight:900;font-style:italic;font-size:28px;text-transform:uppercase;margin-bottom:12px}
+.pbx textarea{width:100%;height:240px;border-radius:14px;background:#08080a;border:1.5px solid #2a2a33;padding:12px;font:15px/1.45 var(--fb);color:#fff;resize:vertical}
+.pbx textarea:focus{outline:none;border-color:var(--red)}
+.pbb{display:flex;justify-content:flex-end;gap:10px;margin-top:12px}
+@media (max-width:640px){.pk{grid-template-columns:1fr 1fr}.pk b{font-size:34px}.poa .pb{flex:1 1 auto;justify-content:center}}
+
 /* mobile menu */
 .mmenu{position:fixed;inset:0;z-index:95;background:rgba(7,7,9,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;padding:100px 30px 40px;gap:4px;clip-path:circle(0% at calc(100% - 50px) 40px);transition:clip-path .7s var(--ease2)}
 .menu-open .mmenu{clip-path:circle(150% at calc(100% - 50px) 40px)}
@@ -1038,7 +1094,7 @@ footer .about{color:var(--mut);font-size:15px;margin:16px 0 20px;max-width:340px
       </div>
       <div><h5>Tienda</h5><ul><li><a href="#catalogo" data-cat="pista">Llantas de pista</a></li><li><a href="#catalogo" data-cat="sport">Deportivas</a></li><li><a href="#catalogo" data-cat="ciudad">Ciudad</a></li><li><a href="#catalogo" data-cat="touring">Touring</a></li><li><a href="#catalogo" data-cat="aventura">Aventura</a></li></ul></div>
       <div><h5>Servicios</h5><ul><li><a href="#instalacion">Instalación en tienda</a></li><li><a href="#servicios">Balanceo</a></li><li><a href="#servicios">Taller mecánico</a></li><li><a href="#servicios">Cambio de aceite</a></li></ul></div>
-      <div><h5>Contacto</h5><ul><li><a class="wal" target="_blank" rel="noopener">WhatsApp 910 156 289</a></li><li>Arequipa, Perú</li><li>Pagos con Yape</li><li><a href="https://www.tiktok.com/@full.llantas.aqp" target="_blank" rel="noopener">TikTok @full.llantas.aqp</a></li></ul></div>
+      <div><h5>Contacto</h5><ul><li><a class="wal" target="_blank" rel="noopener">WhatsApp 910 156 289</a></li><li>Arequipa, Perú</li><li>Pagos con Yape</li><li><a href="#panel">Panel de la tienda</a></li><li><a href="https://www.tiktok.com/@full.llantas.aqp" target="_blank" rel="noopener">TikTok @full.llantas.aqp</a></li></ul></div>
     </div>
     <div class="legal"><span>© <span id="yr"></span> Full Llantas AQP. Todos los derechos reservados.</span><span>Demo de propuesta · precios, horarios y datos de pago referenciales, por confirmar con la tienda</span></div>
   </div>
@@ -1057,6 +1113,17 @@ footer .about{color:var(--mut);font-size:15px;margin:16px 0 20px;max-width:340px
   <div class="dfoot" id="dFoot"></div>
 </aside>
 
+<section id="panel" aria-label="Panel de pedidos">
+  <div class="pwrap">
+    <div class="ptop"><div class="brand"><img data-logo alt=""><div class="t">Panel de <em>pedidos</em><small>Full Llantas AQP · solo tienda</small></div></div><a class="btn gh sm" href="#top">Ver tienda</a></div>
+    <div class="pk" id="pK"></div>
+    <div class="pact"><button class="btn" id="pPaste"><i data-ic="plus"></i>Pegar pedido de WhatsApp</button><button class="btn gh" id="pSum"><i data-ic="copy"></i>Copiar resumen de hoy</button></div>
+    <p class="phelp">En WhatsApp mantén presionado el pedido, toca <b>Copiar</b> y luego <b>Pegar pedido</b> aquí. Los pedidos se guardan en este dispositivo.</p>
+    <div class="ptools"><div class="chips" id="pTabs"></div><div class="search"><i data-ic="search"></i><input id="pQ" type="search" placeholder="Buscar por nombre, celular o N° de pedido" aria-label="Buscar pedido"></div></div>
+    <div id="pList"></div>
+  </div>
+  <div class="pbox" id="pBox"><div class="pbx"><h4>Pega aquí el pedido</h4><textarea id="pTxt" placeholder="Pega el mensaje completo que llegó por WhatsApp"></textarea><div class="pbb"><button class="btn gh sm" id="pCancel">Cancelar</button><button class="btn sm" id="pAdd">Agregar al panel</button></div></div></div>
+</section>
 <div class="modal" id="modal" role="dialog" aria-modal="true"><div class="mb" id="mb"></div></div>
 
 <script>
@@ -1474,7 +1541,7 @@ let lastOrder=null;
 const DOW=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],DOWL=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'],MES=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 function days(){const out=[],n=new Date(),lastH=+CFG.slots[CFG.slots.length-1].slice(0,2);
   for(let i=0;out.length<6&&i<12;i++){const d=new Date(n.getFullYear(),n.getMonth(),n.getDate()+i);if(d.getDay()===0)continue;if(i===0&&n.getHours()>=lastH)continue;
-    out.push({k:`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`,today:i===0,lb:i===0?'Hoy':i===1?'Mañana':`${DOW[d.getDay()]} ${d.getDate()}`,long:`${DOWL[d.getDay()]} ${d.getDate()} de ${MES[d.getMonth()]}`})}
+    out.push({k:`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`,today:i===0,lb:i===0?'Hoy':i===1?'Mañana':`${DOW[d.getDay()]} ${d.getDate()}`,long:`${DOWL[d.getDay()]} ${d.getDate()} de ${MES[d.getMonth()]}`,sh:`${DOW[d.getDay()].toLowerCase()} ${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`})}
   return out}
 const lineInfo=it=>{const p=find(it.id);if(!p)return null;if(p.sizes){const s=p.sizes.find(z=>z[0]===it.size)||p.sizes[0];return{p,name:`${p.brand} ${p.model}`,meta:`${s[0]} · ${s[1]}`,pos:s[1],price:s[2],size:s[0],tread:p.tread,model:p.model}}return{p,name:p.model,meta:`Par: ${p.sub}`,pos:'Par',price:p.price,size:p.sub.split(' + ')[1],tread:p.tread,model:p.model.replace('Combo ','')}};
 const subtotal=()=>cart.reduce((a,it)=>{const l=lineInfo(it);return a+(l?l.price*it.qty:0)},0);
@@ -1504,8 +1571,11 @@ function valid(s){
   if(s===3){if(!co.later&&!/^\d{6,12}$/.test(co.op.replace(/\D/g,'')))return 'Ingresa el N° de operación de tu Yape (solo números)';return ''}
   return ''}
 function buildMsg(id){
-  const L=cart.map(it=>{const l=lineInfo(it);return `• ${it.qty} × ${l.name} — ${l.meta} — ${fmt(l.price*it.qty)}`}).join('\n');
-  return `🛞 *PEDIDO ${id}* — Full Llantas AQP\n\n*Cliente:* ${co.name.trim()}\n*Celular:* ${co.phone.replace(/\D/g,'')}${co.moto.trim()?`\n*Moto:* ${co.moto.trim()}`:''}\n\n*Productos:*\n${L}\n\n*Entrega:* ${delText()}\n*Subtotal:* ${fmt(subtotal())}${co.del==='aqp'?`\n*Delivery:* ${fee()?fmt(fee()):'Gratis'}`:''}${co.del==='pe'?'\n*Flete:* por coordinar':''}\n*TOTAL:* ${fmt(total())}\n\n`+(co.later?'*Pago:* Yape (pendiente). Quiero confirmar stock antes de yapear. 🙏':`*Pago:* Yape ✅\n*N° de operación:* ${co.op.replace(/\D/g,'')}\nAdjunto la captura de mi Yape 📎`)}
+  const d=days().find(x=>x.k===co.day),ph=co.phone.replace(/\D/g,''),moto=co.moto.trim();
+  const head={inst:`🔧 *INSTALACIÓN EN TIENDA* · ${d?d.sh:''} · ${co.slot} h`,rec:'🏪 *RECOJO EN TIENDA* (sin instalación)',aqp:'🛵 *DELIVERY EN AREQUIPA*',pe:'📦 *ENVÍO A PROVINCIA*'}[co.del];
+  const loc=co.del==='aqp'?`\n📍 ${co.addr.trim()}`:co.del==='pe'?`\n📍 ${co.city.trim()}${co.agency.trim()?` · Agencia: ${co.agency.trim()}`:''}`:'';
+  const L=cart.map(it=>{const l=lineInfo(it);return `${it.qty} × ${l.name} · ${l.meta} · ${fmt(l.price*it.qty)}`}).join('\n');
+  return `🛞 *PEDIDO ${id}* · ${fmt(total())} · ${co.later?'Yape ⏳ pendiente':'Yape ✅'}\n${head}${loc}\n\n👤 ${co.name.trim()} · ${ph}\n${moto?`🏍 ${moto}\n`:''}\n*LLANTAS*\n${L}\n\n${co.del==='aqp'?`Delivery: ${fee()?fmt(fee()):'Gratis'}\n`:''}${co.del==='pe'?'Flete: por coordinar\n':''}*TOTAL ${fmt(total())}*\n\n`+(co.later?'⏳ Aún no yapeo: quiero confirmar stock primero.':`💜 Yape · N° de operación: ${co.op.replace(/\D/g,'')}\n📎 Adjunto mi captura`)}
 const dBody=$('#dBody'),dFoot=$('#dFoot'),drawer=$('#drawer');
 const totRow=()=>`<div class="tot big"><span>Total${co.del==='pe'&&co.step>1?' (sin flete)':''}</span><b>${fmt(co.step>1?total():subtotal())}</b></div>`;
 function drawDrawer(){
@@ -1654,6 +1724,77 @@ $('#mb').onclick=e=>{if(!ms)return;let b;
   if((b=e.target.closest('[data-mq]'))){ms.qty=Math.max(1,ms.qty+ +b.dataset.mq);drawModal();return}
   if((b=e.target.closest('#madd'))){const s=ms.p.sizes[ms.si];add(ms.p.id,s[0],ms.qty,b);setTimeout(openCart,650)}};
 
+/* ====== PANEL DE PEDIDOS (uso de la tienda, se guarda en este dispositivo) ====== */
+const PST={nuevo:['Por verificar','y'],confirmado:['Confirmado','g'],listo:['Lista','b'],entregado:['Entregada','k'],anulado:['Anulado','k']};
+const PTY={inst:['🔧','Instalación en tienda'],rec:['🏪','Recojo en tienda'],aqp:['🛵','Delivery en Arequipa'],pe:['📦','Envío a provincia']};
+let orders=ls.get('fl_panel',[]),ptab='act',pq='';
+const saveP=()=>ls.set('fl_panel',orders);
+function parseOrder(raw){
+  const t=String(raw||'').replace(/\*/g,''),id=(t.match(/FL-\d{6}-\d{4}/)||[])[0];if(!id)return null;
+  const cl=t.match(/👤\s*(.+?)\s*·\s*(\d{9})/u),w=t.match(/(\d{1,2})\/(\d{1,2})\s*·\s*(\d{1,2}:\d{2})/);
+  let type='rec';if(/INSTALACI[ÓO]N EN TIENDA/i.test(t))type='inst';else if(/DELIVERY EN AREQUIPA/i.test(t))type='aqp';else if(/ENV[ÍI]O A PROVINCIA/i.test(t))type='pe';
+  return{id,type,total:+(((t.match(/TOTAL\s+S\/\s*([\d,]+)/)||[])[1]||'0').replace(/,/g,'')),paid:/Yape\s*✅/u.test(t),op:(t.match(/operaci[oó]n:\s*(\d{6,12})/i)||[])[1]||'',
+    w:w?{d:+w[1],m:+w[2],t:w[3].padStart(5,'0')}:null,name:cl?cl[1].trim():'Cliente',phone:cl?cl[2]:'',moto:((t.match(/🏍\uFE0F?\s*(.+)/u)||[])[1]||'').trim(),loc:((t.match(/📍\s*(.+)/u)||[])[1]||'').trim(),
+    items:[...t.matchAll(/^\s*(\d+\s*×\s*.+)$/gmu)].map(m=>m[1].trim()),status:'nuevo',at:Date.now()}}
+function addOrder(raw,demo){const o=parseOrder(raw);if(!o){toast('No encontré un pedido en ese texto');return false}if(orders.some(x=>x.id===o.id)){toast(`El pedido ${o.id} ya está en el panel`);return false}if(demo)o.demo=true;orders.push(o);saveP();return true}
+const isToday=ts=>{const a=new Date(ts),n=new Date();return a.toDateString()===n.toDateString()};
+const wToday=o=>{const n=new Date();return !!o.w&&o.w.d===n.getDate()&&o.w.m===n.getMonth()+1};
+const wKey=o=>o.w?o.w.m*1e6+o.w.d*1e4+ +o.w.t.replace(':',''):9e9;
+const wTxt=o=>o.w?`${wToday(o)?'Hoy':String(o.w.d).padStart(2,'0')+'/'+String(o.w.m).padStart(2,'0')} · ${o.w.t} h`:'';
+const fphone=p=>p.replace(/(\d{3})(\d{3})(\d{3})/,'$1 $2 $3');
+function tpl(o,k){const f=o.name.split(' ')[0],cita=o.w?`el ${String(o.w.d).padStart(2,'0')}/${String(o.w.m).padStart(2,'0')} a las ${o.w.t} h`:'';
+  return {ok:`Hola ${f} 👋 Verificamos tu Yape ✅ Tu pedido ${o.id} está confirmado.${o.type==='inst'?` Te esperamos ${cita} en la tienda para instalar tus llantas.`:o.type==='rec'?' Te avisamos apenas esté listo para recoger.':o.type==='aqp'?' Coordinamos la entrega en tu dirección.':' Te enviamos la guía de la agencia apenas despachemos.'}`,
+    pay:`Hola ${f} 👋 Recibimos tu pedido ${o.id} y sí tenemos stock ✅ Para confirmarlo, yapea ${fmt(o.total)} al ${CFG.yape.num} y envíanos la captura.`,
+    cita:`Hola ${f} 👋 Te recordamos tu cita ${cita} en Full Llantas AQP para instalar tus llantas (pedido ${o.id}). ¡Te esperamos!`,
+    ready:`Hola ${f} 👋 Tu pedido ${o.id} ya está listo.${o.type==='rec'?' Puedes pasar a recogerlo cuando gustes.':o.type==='pe'?' Ya lo despachamos; te paso la guía de la agencia.':o.type==='aqp'?' Sale hoy a tu dirección.':''}`,
+    no:`Hola ${f}, sobre tu pedido ${o.id}: por ahora no tenemos stock de esa llanta 🙏 Te puedo ofrecer una alternativa en la misma medida. ¿Te parece?`}[k]}
+const waTo=(o,k,lb,cls)=>o.phone?`<a class="pb ${cls||'wa'}" target="_blank" rel="noopener" href="https://wa.me/51${o.phone}?text=${encodeURIComponent(tpl(o,k))}">${ic('wa')}${lb}</a>`:'';
+function poCard(o){const st=PST[o.status],ty=PTY[o.type];let a='';
+  if(o.status==='nuevo')a=`<button class="pb go" data-st="confirmado">${ic('check')}Pago verificado</button>${o.paid?'':waTo(o,'pay','Hay stock: pedir Yape')}${waTo(o,'no','Sin stock','dim')}<button class="pb dim" data-st="anulado">Anular</button>`;
+  else if(o.status==='confirmado')a=`${waTo(o,'ok','Confirmar al cliente')}${o.type==='inst'?waTo(o,'cita','Recordar cita'):''}<button class="pb go" data-st="listo">${ic('check')}${o.type==='inst'?'Instalada':'Lista'}</button>`;
+  else if(o.status==='listo')a=`${o.type==='inst'?'':waTo(o,'ready','Avisar que está lista')}<button class="pb go" data-st="entregado">${ic('check')}Entregada</button>`;
+  else a=`<button class="pb" data-st="nuevo">Reabrir</button><button class="pb dim" data-rmo>Borrar</button>`;
+  return `<article class="po st-${o.status}" data-o="${esc(o.id)}"><div class="poh"><b>${esc(o.id)}</b><span class="pill ${st[1]}">${st[0]}</span>${o.demo?'<span class="pill k">Ejemplo</span>':''}<em>${fmt(o.total)}</em></div>
+<div class="pot">${ty[0]} ${ty[1]}${o.w?' · '+wTxt(o):''}</div><div class="poc"><b>${esc(o.name)}</b>${o.phone?' · '+fphone(o.phone):''}${o.moto?' · '+esc(o.moto):''}</div>${o.loc?`<div class="pol">📍 ${esc(o.loc)}</div>`:''}
+<ul class="poi">${o.items.map(i=>`<li>${esc(i)}</li>`).join('')||'<li>Sin detalle de productos</li>'}</ul>
+<div class="pop">${o.paid?`Yape ✅ · N° de operación <b>${esc(o.op||'—')}</b>`:'Yape ⏳ <b>aún no pagó</b>: pidió confirmar stock'}</div><div class="poa">${a}</div></article>`}
+function drawPanel(){
+  const act=orders.filter(o=>['nuevo','confirmado','listo'].includes(o.status)),nv=orders.filter(o=>o.status==='nuevo').length;
+  $('#pK').innerHTML=`<div class="${nv?'hot':''}"><b>${nv}</b><span>Por verificar</span></div><div><b>${act.filter(o=>o.type==='inst'&&wToday(o)).length}</b><span>Instalaciones hoy</span></div><div><b>${act.length}</b><span>Pedidos activos</span></div><div><b>${fmt(orders.filter(o=>isToday(o.at)&&['confirmado','listo','entregado'].includes(o.status)).reduce((a,o)=>a+o.total,0))}</b><span>Confirmado hoy</span></div>`;
+  const T=[['act','Activos',act.length],['nuevo','Por verificar',nv],['confirmado','Confirmados',orders.filter(o=>o.status==='confirmado').length],['listo','Listas',orders.filter(o=>o.status==='listo').length],['agenda','Agenda',act.filter(o=>o.type==='inst').length],['fin','Cerrados',orders.filter(o=>['entregado','anulado'].includes(o.status)).length]];
+  $('#pTabs').innerHTML=T.map(([k,n,c])=>`<button class="chip${ptab===k?' on':''}" data-pt="${k}">${n}<b>${c}</b></button>`).join('');
+  let l=ptab==='act'?act:ptab==='agenda'?act.filter(o=>o.type==='inst'):ptab==='fin'?orders.filter(o=>['entregado','anulado'].includes(o.status)):orders.filter(o=>o.status===ptab);
+  if(pq){const q=pq.toLowerCase();l=l.filter(o=>(o.id+o.name+o.phone+o.moto+o.items.join(' ')).toLowerCase().includes(q))}
+  const ord={nuevo:0,confirmado:1,listo:2,entregado:3,anulado:4};
+  l=[...l].sort(ptab==='agenda'?(a,b)=>wKey(a)-wKey(b):(a,b)=>ord[a.status]-ord[b.status]||b.at-a.at);
+  let h='';
+  if(!orders.length)h=`<div class="pempty"><b>Aún no hay pedidos</b>Cuando llegue un pedido por WhatsApp, cópialo y pégalo aquí para darle seguimiento.<br><button class="btn gh sm" id="pDemo">Cargar pedidos de ejemplo</button></div>`;
+  else if(!l.length)h=`<div class="pempty"><b>Nada por aquí</b>No hay pedidos en esta vista.</div>`;
+  else if(ptab==='agenda'){let last='';for(const o of l){const d=o.w?(wToday(o)?'Hoy':`${String(o.w.d).padStart(2,'0')}/${String(o.w.m).padStart(2,'0')}`):'Sin fecha';if(d!==last){h+=`<div class="pday">${d}</div>`;last=d}h+=poCard(o)}}
+  else h=l.map(poCard).join('');
+  $('#pList').innerHTML=h;
+}
+function demoOrders(){const n=new Date(),dd=String(n.getDate()).padStart(2,'0'),mm=String(n.getMonth()+1).padStart(2,'0'),y=String(n.getFullYear()).slice(2),id=k=>`FL-${y}${mm}${dd}-${k}`;
+  [`🛞 *PEDIDO ${id(4821)}* · S/ 1,550 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · hoy ${dd}/${mm} · 10:00 h\n\n👤 Carlos Mamani · 987654321\n🏍 Yamaha R1\n\n*LLANTAS*\n1 × Combo Sportmax Q5 · Par: 120/70 ZR17 + 190/55 ZR17 · S/ 1,550\n\n*TOTAL S/ 1,550*\n\n💜 Yape · N° de operación: 48213377\n📎 Adjunto mi captura`,
+   `🛞 *PEDIDO ${id(5173)}* · S/ 648 · Yape ✅\n🔧 *INSTALACIÓN EN TIENDA* · hoy ${dd}/${mm} · 16:00 h\n\n👤 Lucía Quispe · 956112233\n🏍 KTM Duke 390\n\n*LLANTAS*\n1 × DUNLOP Sportmax GPR-300 · 110/70 R17 · Delantera · S/ 349\n1 × DUNLOP Sportmax GPR-300 · 150/60 R17 · Trasera · S/ 399\n\n*TOTAL S/ 648*\n\n💜 Yape · N° de operación: 51730984\n📎 Adjunto mi captura`,
+   `🛞 *PEDIDO ${id(6040)}* · S/ 499 · Yape ⏳ pendiente\n📦 *ENVÍO A PROVINCIA*\n📍 Cusco · Agencia: Shalom\n\n👤 Diego Huamán · 944556677\n🏍 Yamaha MT-09\n\n*LLANTAS*\n1 × CST Adreno Sport · 180/55 ZR17 · Trasera · S/ 499\n\nFlete: por coordinar\n*TOTAL S/ 499*\n\n⏳ Aún no yapeo: quiero confirmar stock primero.`,
+   `🛞 *PEDIDO ${id(7265)}* · S/ 289 · Yape ✅\n🛵 *DELIVERY EN AREQUIPA*\n📍 Av. Ejército 710, Yanahuara\n\n👤 Renzo Flores · 931778899\n\n*LLANTAS*\n1 × DUNLOP Sportmax Q-Lite · 130/70-17 · Trasera · S/ 279\n\nDelivery: S/ 10\n*TOTAL S/ 289*\n\n💜 Yape · N° de operación: 72650012\n📎 Adjunto mi captura`].forEach(m=>addOrder(m,true));
+  const b=orders.find(o=>o.id===id(5173));if(b)b.status='confirmado';saveP();drawPanel()}
+function pasteOrder(t){if(addOrder(t)){ptab='act';drawPanel();toast('Pedido agregado al panel');return true}return false}
+$('#pPaste').onclick=()=>{const open=()=>{$('#pTxt').value='';$('#pBox').classList.add('on');$('#pTxt').focus()};try{navigator.clipboard.readText().then(t=>{if(!(t&&/FL-\d{6}-\d{4}/.test(t)&&pasteOrder(t)))open()}).catch(open)}catch(e){open()}};
+$('#pCancel').onclick=()=>$('#pBox').classList.remove('on');
+$('#pAdd').onclick=()=>{if(pasteOrder($('#pTxt').value))$('#pBox').classList.remove('on')};
+$('#pQ').oninput=e=>{pq=e.target.value.trim();drawPanel()};
+$('#pSum').onclick=()=>{const t=orders.filter(o=>isToday(o.at)&&o.status!=='anulado'),tx=`Full Llantas AQP · pedidos de hoy (${t.length})\n`+t.map(o=>`${o.id} · ${PST[o.status][0]} · ${PTY[o.type][1]}${o.w?' '+wTxt(o):''} · ${o.name} · ${fmt(o.total)}`).join('\n')+`\nTotal: ${fmt(t.reduce((a,o)=>a+o.total,0))}`;try{navigator.clipboard.writeText(tx).then(()=>toast('Resumen copiado')).catch(()=>toast('No se pudo copiar'))}catch(e){toast('No se pudo copiar')}};
+$('#panel').addEventListener('click',e=>{let b;
+  if((b=e.target.closest('[data-pt]'))){ptab=b.dataset.pt;drawPanel();return}
+  if(e.target.closest('#pDemo')){demoOrders();return}
+  const card=e.target.closest('.po');if(!card)return;const o=orders.find(x=>x.id===card.dataset.o);if(!o)return;
+  if((b=e.target.closest('[data-st]'))){o.status=b.dataset.st;saveP();drawPanel();toast(`${o.id}: ${PST[o.status][0]}`);return}
+  if(e.target.closest('[data-rmo]')){orders=orders.filter(x=>x!==o);saveP();drawPanel()}});
+function route(){const on=location.hash==='#panel';document.body.classList.toggle('panelon',on);if(on){closeAll();document.body.classList.remove('menu-open');drawPanel();scrollTo(0,0)}}
+addEventListener('hashchange',route);
+
 /* ====== NAV / SCROLL ====== */
 const nav=$('#nav'),prog=$('#prog');
 addEventListener('scroll',()=>{nav.classList.toggle('sc',scrollY>40);const h=document.documentElement.scrollHeight-innerHeight;prog.style.transform=`scaleX(${h>0?scrollY/h:0})`;
@@ -1667,7 +1808,7 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)retur
 $$('[data-count]').forEach(el=>cio.observe(el));
 
 /* ====== ARRANQUE ====== */
-render();drawDrawer();rsS();
+render();drawDrawer();rsS();route();
 requestAnimationFrame(tick);if(!rm)requestAnimationFrame(sparkLoop);
 const pct=$('#pct'),pbar=$('#pbar'),pre=$('#pre');let pv=0;
 const ptick=()=>{pv=Math.min(100,pv+(100-pv)*.09+1.2);pct.textContent=Math.floor(pv)+'%';pbar.style.width=pv+'%';if(pv<100)setTimeout(ptick,26);else{pre.classList.add('out');setTimeout(()=>{pre.classList.add('gone');document.body.classList.add('loaded');rsS()},650);setTimeout(()=>pre.remove(),1600)}};
